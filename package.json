@@ -1,0 +1,18 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "runChrome": "./node_modules/.bin/cypress run --spec /Users/sanjay.shivam/Documents/UiAutomation/cypress/e2e/myTestCases/alertHandle.js --headed --browser chrome",
+    "headed": "npx cypress run --headed --browser chrome",
+    "dashboard-chrome": "npx cypress run --record --key 74de4d14-d912-45c1-865b-584eb6e60b40 --spec /Users/sanjay.shivam/Documents/UiAutomation/cypress/e2e/myTestCases/alertHandle.js --headed --browser chrome"
+  },
+  "devDependencies": {
+    "cypress": "^15.14.0"
+  }
+}
