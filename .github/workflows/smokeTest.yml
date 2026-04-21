@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Smoke Tests
 
 on:
   push:
