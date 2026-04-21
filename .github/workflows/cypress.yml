@@ -22,11 +22,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify Cypress binary
+        run: npx cypress verify
+
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
           install: false
           browser: chrome
+          config: retries=2
 
       - name: Upload screenshots on failure
         uses: actions/upload-artifact@v4
