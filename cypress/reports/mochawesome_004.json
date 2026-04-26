@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-26T18:40:42.023Z",
+    "end": "2026-04-26T18:41:00.463Z",
+    "duration": 18440,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "998416d5-2786-4168-8843-a32ed3137054",
+      "title": "",
+      "fullFile": "cypress/e2e/myTestCases/webTables.js",
+      "file": "cypress/e2e/myTestCases/webTables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b17773af-d109-4362-a765-b8dbd9cc7c3e",
+          "title": "webtables test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Retrieving single cell data",
+              "fullTitle": "webtables test suite Retrieving single cell data",
+              "timedOut": null,
+              "duration": 1490,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.table tbody tr:nth-child(1) td:nth-child(1)').invoke('text').then(val => {\n  expect(val).to.be.eql('Cierra');\n});",
+              "err": {},
+              "uuid": "82c04548-e3f8-4e4f-81f1-4d97c97f0e3b",
+              "parentUUID": "b17773af-d109-4362-a765-b8dbd9cc7c3e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Retrieving single rows data",
+              "fullTitle": "webtables test suite Retrieving single rows data",
+              "timedOut": null,
+              "duration": 584,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.table tbody tr:nth-child(1) td').each(($el, index, col) => {\n  cy.wrap($el).invoke('text').then(nval => {\n    cy.log(nval);\n  });\n});",
+              "err": {},
+              "uuid": "ffc606a4-3a61-499a-9d1d-f6f0239dd5aa",
+              "parentUUID": "b17773af-d109-4362-a765-b8dbd9cc7c3e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Retrieving all the data from the table",
+              "fullTitle": "webtables test suite Retrieving all the data from the table",
+              "timedOut": null,
+              "duration": 15633,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.table tbody tr').each(($el, index, $col) => {\n  cy.wrap($el).find('td').each(($el1, index1, $col1) => {\n    cy.wrap($el1).invoke('text').then(val2 => {\n      cy.log(val2);\n    });\n  });\n});",
+              "err": {},
+              "uuid": "4518d2a8-a290-4197-994d-b159b7cda3b5",
+              "parentUUID": "b17773af-d109-4362-a765-b8dbd9cc7c3e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82c04548-e3f8-4e4f-81f1-4d97c97f0e3b",
+            "ffc606a4-3a61-499a-9d1d-f6f0239dd5aa",
+            "4518d2a8-a290-4197-994d-b159b7cda3b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17707,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

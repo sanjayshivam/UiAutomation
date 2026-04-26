@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-26T18:40:36.047Z",
+    "end": "2026-04-26T18:40:37.372Z",
+    "duration": 1325,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4328734e-7990-45a5-aef5-281d5810f393",
+      "title": "",
+      "fullFile": "cypress/e2e/myTestCases/interceptUse.js",
+      "file": "cypress/e2e/myTestCases/interceptUse.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a981ff6d-d809-4061-add8-f1e4888d391b",
+          "title": "Intercept test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "intercept test case",
+              "fullTitle": "Intercept test suite intercept test case",
+              "timedOut": null,
+              "duration": 370,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\nmethds.interceptMethod();",
+              "err": {},
+              "uuid": "4831086e-7f7a-4e69-8d74-6f04c5413e20",
+              "parentUUID": "a981ff6d-d809-4061-add8-f1e4888d391b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4831086e-7f7a-4e69-8d74-6f04c5413e20"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 370,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

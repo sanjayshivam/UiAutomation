@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-26T18:40:24.035Z",
+    "end": "2026-04-26T18:40:33.749Z",
+    "duration": 9714,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb4b5123-c952-4085-abfe-d39c15c51dc9",
+      "title": "",
+      "fullFile": "cypress/e2e/myTestCases/alertHandle.js",
+      "file": "cypress/e2e/myTestCases/alertHandle.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+          "title": "alert handling test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ok alert",
+              "fullTitle": "alert handling test suite ok alert",
+              "timedOut": null,
+              "duration": 2112,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#alertButton').click();\ncy.on('window:alert', e => {\n  expect(e).to.be.eql('You clicked a button');\n});",
+              "err": {},
+              "uuid": "2de4a9ae-d858-41a9-b934-00b4636c20e2",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delayAlert",
+              "fullTitle": "alert handling test suite delayAlert",
+              "timedOut": null,
+              "duration": 920,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#timerAlertButton').click();\ncy.on('window:alert', t => {\n  expect(t).to.be.eql('This alert appeared after 5 seconds');\n});",
+              "err": {},
+              "uuid": "2b872587-80b4-4c09-b140-9ca2487638cc",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "confirm alert OK",
+              "fullTitle": "alert handling test suite confirm alert OK",
+              "timedOut": null,
+              "duration": 974,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#confirmButton').click();\ncy.on('window:confirm', c => {\n  expect(c).to.be.eql('Do you confirm action?');\n});\ncy.get('#confirmResult').should('have.text', 'You selected Ok');",
+              "err": {},
+              "uuid": "bfc0f589-d9a3-4fd8-bf95-e76c24666050",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "confirm alert cancel",
+              "fullTitle": "alert handling test suite confirm alert cancel",
+              "timedOut": null,
+              "duration": 923,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#confirmButton').click();\ncy.on('window:confirm', c => {\n  expect(c).to.be.eql('Do you confirm action?');\n  return false;\n});\ncy.get('#confirmResult').should('have.text', 'You selected Cancel');",
+              "err": {},
+              "uuid": "6bad3437-27f7-42fd-a869-3c3ce122f0c5",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prompt alert ok",
+              "fullTitle": "alert handling test suite prompt alert ok",
+              "timedOut": null,
+              "duration": 941,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.window().then(pw => {\n  cy.stub(pw, 'prompt').returns('test');\n});\ncy.get('#promtButton').click();\ncy.on('window:prompt', p => {\n  expect(p).to.be.eql('Please enter your name');\n});\ncy.get('#promptResult').invoke('text').then(val => {\n  expect(val).to.be.eql('You entered test');\n});",
+              "err": {},
+              "uuid": "1e83ed0e-c402-4bd8-a7b2-7fd5f13ff352",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prompt alert cancel",
+              "fullTitle": "alert handling test suite prompt alert cancel",
+              "timedOut": null,
+              "duration": 938,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.window().then(pw => {\n  cy.stub(pw, 'prompt').returns(false);\n});\ncy.get('#promtButton').click();",
+              "err": {},
+              "uuid": "0eb50a08-a4a7-4a9d-abe3-6a2a8c723a5d",
+              "parentUUID": "f7e36afd-a2ad-4018-8657-54dd04285ccc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2de4a9ae-d858-41a9-b934-00b4636c20e2",
+            "2b872587-80b4-4c09-b140-9ca2487638cc",
+            "bfc0f589-d9a3-4fd8-bf95-e76c24666050",
+            "6bad3437-27f7-42fd-a869-3c3ce122f0c5",
+            "1e83ed0e-c402-4bd8-a7b2-7fd5f13ff352",
+            "0eb50a08-a4a7-4a9d-abe3-6a2a8c723a5d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6808,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

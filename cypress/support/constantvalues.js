@@ -3,4 +3,8 @@
             currentAddress:'test1',
             parmanenetAddress:'test2'
         }
-        module.exports={fixedVal}
+        const student={
+            name:"sanjay",
+            lastName:'shivam'
+        }
+        module.exports={fixedVal,student}

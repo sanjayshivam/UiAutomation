@@ -20,5 +20,6 @@ function interceptMethod(){
             cy.log(response.body.length)
         })
 }
+const tst='test'
 
-module.exports={interceptMethod}
+module.exports={interceptMethod,tst}
